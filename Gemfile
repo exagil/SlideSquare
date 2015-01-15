@@ -10,6 +10,7 @@ gem 'sdoc',                 '0.4.0', group: :doc
 gem 'bootstrap-sass', '~> 3.3.1'
 gem 'sass-rails', '>= 3.2'
 gem 'autoprefixer-rails'
+gem 'font-awesome-sass', '~> 4.2.0'
 
 group :development, :test do
   gem 'sqlite3',     '1.3.9'
