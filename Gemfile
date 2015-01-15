@@ -11,7 +11,6 @@ gem 'bootstrap-sass', '~> 3.3.1'
 gem 'sass-rails', '>= 3.2'
 gem 'autoprefixer-rails'
 
-
 group :development, :test do
   gem 'sqlite3',     '1.3.9'
   gem 'byebug',      '3.4.0'
