@@ -1,28 +1,17 @@
-== README
+Welcome to SlideSquare
+======================
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+SlideSquare is an open source online utility to share and explore cool presentations with the world.
+Just upload a presentation in a click, choose the category and BOOM! The world sees it! 
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+  Features
+  --------
+    * Anyone can view public presentations
+    * Presentations are filtered in categories
+    * Users can upload presentations and select a category it belongs to
+    * Users can like, comment, download and share presentations
+    * Anyone can search presentations according to their preferences
+    * Beautiful medium to explore presentations
+    * User specific feed customization
+    * Users can follow other users
+    * Regular notifications from users followed
