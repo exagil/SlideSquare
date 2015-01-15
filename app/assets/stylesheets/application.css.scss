@@ -4,4 +4,9 @@
 @import "font-awesome-sprockets";
 @import "font-awesome";
 @import 'static_pages';
+@import 'header';
 @import 'footer';
+
+body {
+  background-color: #eeeeee;
+}
