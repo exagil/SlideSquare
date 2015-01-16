@@ -11,6 +11,7 @@ gem 'bootstrap-sass', '~> 3.3.1'
 gem 'sass-rails', '>= 3.2'
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass', '~> 4.2.0'
+gem 'docsplit', '~> 0.7.6'
 
 group :development, :test do
   gem 'sqlite3',     '1.3.9'
