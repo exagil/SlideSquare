@@ -6,6 +6,8 @@ class PresentationsController < ApplicationController
 
   def show
     @presentation = Presentation.find(params[:id])
+    uri_escaped_string = URI.escape("@presentation.presentation_file.url")
+    @link = "http://docs.google.com/viewer?url=" + uri_escaped_string
   end
 
   def new
