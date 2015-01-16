@@ -6,8 +6,9 @@ class PresentationsController < ApplicationController
 
   def show
     @presentation = Presentation.find(params[:id])
-    uri_escaped_string = URI.escape(@presentation.presentation_file.url)
-    @link = "http://docs.google.com/viewer?url=" + uri_escaped_string
+    # only for production
+    @presentation_link =  Rack::Utils.escape(@presentation.presentation_file.url)
+    @presentation_link = "http://docs.google.com/viewer?url=" + @presentation_link
   end
 
   def new
