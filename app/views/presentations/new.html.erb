@@ -1,0 +1,25 @@
+<div class="row">
+  <%= form_for @presentation do |f| %>
+  <div class="col-md-6 col-md-offset-3">
+    <h2>New Presentation</h2><br />
+    <!-- input for title -->
+    <div class="form-group">
+      <div class="input-group">
+          <%= f.text_field :title, class: 'form-control', placeholder: 'Presentation Title' %>
+          <span class="input-group-addon"></span>
+      </div>
+    </div>
+
+    <!-- input for description -->
+    <div class="form-group">
+      <div class="input-group">
+        <%= f.text_area :body, class: 'form-control', rows: 5, placeholder: 'Presentation Description' %>
+        <span class="input-group-addon"></span>
+      </div>
+    </div>
+
+    <!-- submit -->
+    <%= f.submit "Create Presentation", class: "btn btn-default pull-right" %>
+  </div><!-- / col-md-6 col-md-offset-3 -->
+  <% end %>
+</div><!-- END row -->
