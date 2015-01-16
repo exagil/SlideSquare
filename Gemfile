@@ -13,6 +13,8 @@ gem 'autoprefixer-rails'
 gem 'font-awesome-sass', '~> 4.2.0'
 gem 'docsplit', '~> 0.7.6'
 gem 'carrierwave'
+gem 'mini_magick'            
+gem 'fog'                     
 
 group :development, :test do
   gem 'sqlite3',     '1.3.9'
