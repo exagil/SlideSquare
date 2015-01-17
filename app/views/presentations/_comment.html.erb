@@ -1,5 +1,6 @@
 <div class="well">
-  <i class="fa fa-trash-o pull-right"></i>
+  <%= link_to icon('fa fa-trash-o'), presentation_comment_path(@presentation,comment), method: :delete, class: 'pull-right' %>
   <h4>Comment by <%= comment.author_name %></h4>
   <p><%= comment.body %></p>
+  <p>Created <%= time_ago_in_words(comment.created_at) %> ago</p>
 </div>

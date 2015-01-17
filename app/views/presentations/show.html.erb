@@ -1,15 +1,18 @@
 <div class="col-md-9">
-  <h2><%= @presentation.title %></h2>
-  <%= link_to "All Presentations", presentations_path, class: 'btn btn-default' %>
-  <%= link_to "Delete", presentation_path(@presentation), method: :delete, data: {confirm: "Are you sure?"}, class: 'btn btn-default' %>
-  <p><%= @presentation.body %></p>
-  <p><%= link_to "Play", @presentation_link %></p>
-
-  <h3><b>What's on your mind?</b></h3>
-  <%= render partial: 'comments/form' %>
-  <% if @presentation.comments.count<1 %>
-    <p>No comments</p>
-  <% else %>
-    <%= render partial: 'comment', collection: @presentation.comments %>
-  <% end %>
+  <div class="col-md-12">
+    <h2><%= @presentation.title %></h2>
+    <%= link_to "All Presentations", presentations_path, class: 'btn btn-default' %>
+    <%= link_to "Delete", presentation_path(@presentation), method: :delete, data: {confirm: "Are you sure?"}, class: 'btn btn-default' %>
+    <p><%= @presentation.body %></p>
+    <p><%= link_to "Play", @presentation_link, class: 'btn btn-primary' %></p>
+  </div>
+  <div class="col-md-12">
+    <h3><b>What's on your mind?</b></h3>
+    <%= render partial: 'comments/form' %>
+    <% if @presentation.comments.count<1 %>
+      <p>No comments</p>
+    <% else %>
+      <%= render partial: 'comment', collection: @presentation.comments %>
+    <% end %>
+    </div>
 </div>

@@ -11,6 +11,12 @@ class CommentsController < ApplicationController
     end
   end
 
+  def destroy
+    comment = Comment.find(params[:id])
+    comment.delete
+    redirect_to presentation_path(params[:presentation_id])
+  end
+
   private
     def params_comment
       params.require(:comment).permit(:author_name, :body)
