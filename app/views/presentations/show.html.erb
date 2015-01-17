@@ -1,25 +1,12 @@
 <h2><%= @presentation.title %></h2>
-<p><%= @presentation.body %></p>
-<%= @presentation_link %>
-<p><%= link_to "Play", @presentation_link %></p>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-<%= link_to "Presentations", presentations_path, class: 'btn btn-default' %>
+<%= link_to "All Presentations", presentations_path, class: 'btn btn-default' %>
 <%= link_to "Delete", presentation_path(@presentation), method: :delete, data: {confirm: "Are you sure?"}, class: 'btn btn-default' %>
+<p><%= @presentation.body %></p>
+<p><%= link_to "Play", @presentation_link %></p>
+
+<h3><b>Comments</b></h3>
+<% if @presentation.comments.count<1 %>
+  <p>No comments</p>
+<% else %>
+  <%= render partial: 'comment', collection: @presentation.comments %>
+<% end %>

@@ -11,5 +11,6 @@
 #
 
 class Presentation < ActiveRecord::Base
+  has_many :comments
   mount_uploader :presentation_file, CwpresentationUploader
 end
