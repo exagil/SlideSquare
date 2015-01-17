@@ -9,6 +9,8 @@ class PresentationsController < ApplicationController
     # only for production
     @presentation_link =  Rack::Utils.escape(@presentation.presentation_file.url)
     @presentation_link = "http://docs.google.com/viewer?url=" + @presentation_link
+    @comment = Comment.new
+    @comment.presentation_id = @presentation.id
   end
 
   def new

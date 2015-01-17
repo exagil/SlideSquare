@@ -5,5 +5,8 @@ Rails.application.routes.draw do
 
   get 'static_pages/contact'
 
-  resources :presentations, only: [:index, :show, :new,:create, :destroy]
+  resources :presentations do
+    resources :comments
+  end
+
 end
