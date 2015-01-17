@@ -1,6 +1,7 @@
 <div class="col-md-9">
   <div class="col-md-12">
     <h2><%= @presentation.title %></h2>
+    <h5 class="dull-text"><%= @presentation.category.name %></h5>
     <%= link_to "All Presentations", presentations_path, class: 'btn btn-default' %>
     <%= link_to "Delete", presentation_path(@presentation), method: :delete, data: {confirm: "Are you sure?"}, class: 'btn btn-default' %>
     <p><%= @presentation.body %></p>

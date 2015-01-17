@@ -8,9 +8,11 @@
 #  created_at        :datetime         not null
 #  updated_at        :datetime         not null
 #  presentation_file :string
+#  category_id       :integer
 #
 
 class Presentation < ActiveRecord::Base
-  has_many :comments
   mount_uploader :presentation_file, CwpresentationUploader
+  has_many :comments
+  belongs_to :category
 end

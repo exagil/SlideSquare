@@ -11,7 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150117033023) do
+ActiveRecord::Schema.define(version: 20150117085029) do
+
+  create_table "categories", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "comments", force: :cascade do |t|
     t.string   "author_name"
@@ -29,6 +35,9 @@ ActiveRecord::Schema.define(version: 20150117033023) do
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
     t.string   "presentation_file"
+    t.integer  "category_id"
   end
+
+  add_index "presentations", ["category_id"], name: "index_presentations_on_category_id"
 
 end

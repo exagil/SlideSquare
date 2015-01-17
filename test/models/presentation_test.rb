@@ -8,6 +8,7 @@
 #  created_at        :datetime         not null
 #  updated_at        :datetime         not null
 #  presentation_file :string
+#  category_id       :integer
 #
 
 require 'test_helper'

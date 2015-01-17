@@ -15,6 +15,7 @@ class PresentationsController < ApplicationController
 
   def new
     @presentation = Presentation.new
+    @categories = Category.all
   end
 
   def create
