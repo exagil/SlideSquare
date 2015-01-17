@@ -4,7 +4,7 @@
     <%= link_to "All Presentations", presentations_path, class: 'btn btn-default' %>
     <%= link_to "Delete", presentation_path(@presentation), method: :delete, data: {confirm: "Are you sure?"}, class: 'btn btn-default' %>
     <p><%= @presentation.body %></p>
-    <p><%= link_to "Play", @presentation_link, class: 'btn btn-primary' %></p>
+    <iframe src="<%= @presentation_link %>&embedded=true" width="600" height="780" style="border: none;"></iframe>
   </div>
   <div class="col-md-12">
     <h3><b>What's on your mind?</b></h3>
@@ -14,5 +14,5 @@
     <% else %>
       <%= render partial: 'comment', collection: @presentation.comments %>
     <% end %>
-    </div>
+  </div>
 </div>
