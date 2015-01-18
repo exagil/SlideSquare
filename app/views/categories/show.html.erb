@@ -1,0 +1,6 @@
+<h2><%= @category.name %></h2>
+<ul>
+  <% @presentations.each do |presentation| %>
+    <%= link_to presentation.title, presentation_url(presentation) %>
+  <% end %>
+</ul>

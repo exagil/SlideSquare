@@ -51,4 +51,13 @@
   </div><!-- /.container-fluid -->
 </nav>
 <nav class="navbar navbar-default" id="category-bar">
+    <div class="container">
+        <ul class="nav navbar-nav nav-justified">
+          <li><%= link_to "Home", root_url %></li>
+          <% @categories_on_head.each do |category| %>
+            <li><%= link_to category.name, category_path(category) %></li>
+          <% end %>
+          <li><%= link_to "More Topics", categories_url %></li>
+      </ul>
+    </div>
 </nav>
