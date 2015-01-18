@@ -19,3 +19,12 @@
   font-style: italic;
   color: #999999;
 }
+
+a .tag{
+  color: #999999;
+  &:hover {
+    text-decoration: none;
+    color: #777777;
+    font-weight: bold;
+  }
+}
