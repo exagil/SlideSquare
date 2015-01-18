@@ -11,6 +11,7 @@ class PresentationsController < ApplicationController
     @presentation_link = "http://docs.google.com/viewer?url=" + @presentation_link
     @comment = Comment.new
     @comment.presentation_id = @presentation.id
+
   end
 
   def new

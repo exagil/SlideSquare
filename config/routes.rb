@@ -8,5 +8,4 @@ Rails.application.routes.draw do
   resources :presentations do
     resources :comments
   end
-
 end

@@ -8,6 +8,7 @@
     <iframe src="<%= @presentation_link %>&embedded=true" width="600" height="780" style="border: none;"></iframe>
   </div>
   <div class="col-md-12">
+    <%= render partial: 'tag', collection: @presentation.tags %>
     <h3><b>What's on your mind?</b></h3>
     <%= render partial: 'comments/form' %>
     <% if @presentation.comments.count<1 %>
