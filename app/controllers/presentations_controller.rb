@@ -31,7 +31,7 @@ class PresentationsController < ApplicationController
 
   def destroy
     presentation = Presentation.find(params[:id])
-    if presentation.delete
+    if presentation.destroy
       redirect_to presentations_path
     else
       render presentation_path(presentation)
