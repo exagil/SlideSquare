@@ -18,31 +18,37 @@
 .navbar-form{
   .form-control:focus {
     border-color: rgba(232, 112, 61, .8);
-    box-shadow: inset 0 1px 1px rgba(232, 112, 61, 0.075), 0 0 8px rgba(232, 112, 61, 0.6);
+    box-shadow: inset 0 1px 1px rgba(232, 112, 61, 0.075), 0 0 8px rgba(232, 112, 61, 0.4);
   }
 }
 
-.form-nav {
-  color: whitesmoke;
-  background: rgba(255,255,255,.2);
-  &:active {
-    border-color: yellow;
-    ::-webkit-input-placeholder { /* WebKit browsers */
-      color: white;
-    }
-    :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-       color: white;
-       opacity:  1;
-    }
-    ::-moz-placeholder { /* Mozilla Firefox 19+ */
-       color: white;
-       opacity:  1;
-    }
-    :-ms-input-placeholder { /* Internet Explorer 10+ */
-       color: white
+.form-group {
+  .form-nav {
+    color: whitesmoke;
+    background: rgba(255,255,255,.2);
+    &:active {
+      ::-webkit-input-placeholder { /* WebKit browsers */
+        color: white;
+      }
+      :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+         color: white;
+         opacity:  1;
+      }
+      ::-moz-placeholder { /* Mozilla Firefox 19+ */
+         color: white;
+         opacity:  1;
+      }
+      :-ms-input-placeholder { /* Internet Explorer 10+ */
+         color: white
+      }
     }
   }
 }
+
+.navbar-form .has-feedback .form-control-feedback {
+  top: 9px;
+  color: #DADADA;
+  }
 
 .form-nav-button {
   display: none;
