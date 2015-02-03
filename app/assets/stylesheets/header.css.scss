@@ -1,19 +1,78 @@
 #navbar-top {
   margin-bottom: 0px;
   border: none;
+  background: rgb(51,51,51);
+  border-radius: 0px;
 }
+
+.navbar-brand {
+  font-family: 'Montserrat', sans-serif;
+  #slide {
+    color: #E8703D;
+  }
+  #share {
+    color: #DADADA;
+  }
+}
+
+.navbar-form{
+  .form-control:focus {
+    border-color: rgba(232, 112, 61, .8);
+    box-shadow: inset 0 1px 1px rgba(232, 112, 61, 0.075), 0 0 8px rgba(232, 112, 61, 0.6);
+  }
+}
+
+.form-nav {
+  color: whitesmoke;
+  background: rgba(255,255,255,.2);
+  &:active {
+    border-color: yellow;
+    ::-webkit-input-placeholder { /* WebKit browsers */
+      color: white;
+    }
+    :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+       color: white;
+       opacity:  1;
+    }
+    ::-moz-placeholder { /* Mozilla Firefox 19+ */
+       color: white;
+       opacity:  1;
+    }
+    :-ms-input-placeholder { /* Internet Explorer 10+ */
+       color: white
+    }
+  }
+}
+
+.form-nav-button {
+  display: none;
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: #DADADA;
+  &:hover {
+    color: #DADADA;
+  }
+  &:active {
+    color: #DADADA;
+  }
+  &:visited {
+    color: #DADADA;
+  }
+}
+
 #category-bar {
   background: none;
   filter: none;
   border: none;
   box-shadow: none;
   min-height: 30px;
-  background-color: #333333;
+  background: rgba(0,0,0,.7);
   border-radius: 0px;
   margin-bottom: 10vh;
 
-  li a{
-    color: white;
+  li a, li a:hover, li a:visited, li a:hover{
+    // color: white;
     padding: 5px;
   }
 
